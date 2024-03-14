@@ -17,7 +17,7 @@ connectDb()
 
 
 const corsOptions ={
-  origin:'*', 
+  origin:['https://clickpost-app.onrender.com','http://localhost:3000'], 
   credentials:true,            //access-control-allow-credentials:true
   optionSuccessStatus:200
 }
