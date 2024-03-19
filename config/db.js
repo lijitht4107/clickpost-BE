@@ -1,9 +1,11 @@
+const dotenv = require('dotenv').config()
 const mongoose = require("mongoose");
+
 
 const connectDb = async () => {
   try {
     const connection = await mongoose.connect(
-      "mongodb+srv://lijiththazhathethil:jzs2FZSpGrlOLFfY@cluster0.86bvk2c.mongodb.net/clickpost",
+      process.env.DB_URL,
       {
         useNewUrlParser: "true",
       }
