@@ -18,11 +18,13 @@ connectDb()
 
 
 const corsOptions ={
-  origin:['https://clickpost-app.onrender.com','http://localhost:3000','click-post-fe-frontend.vercel.app'], 
+   
   credentials:true,            
   optionSuccessStatus:200
 }
-app.use(cors(corsOptions));
+app.use(cors({
+  origin:['click-post-fe-frontend.vercel.app','http://localhost:3000']}
+));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
