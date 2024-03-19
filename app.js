@@ -23,7 +23,8 @@ const corsOptions ={
   optionSuccessStatus:200
 }
 app.use(cors({
-  origin:['click-post-fe-frontend.vercel.app','http://localhost:3000']}
+  origin:['click-post-fe-frontend.vercel.app','http://localhost:3000',
+  'https://click-post-fe-frontend.vercel.app']}
 ));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
