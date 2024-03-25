@@ -16,12 +16,6 @@ var app = express();
 
 connectDb()
 
-
-const corsOptions ={
-   
-  credentials:true,            
-  optionSuccessStatus:200
-}
 app.use(cors({
   origin:['click-post-fe-frontend.vercel.app','http://localhost:3000',
   'https://click-post-fe-frontend.vercel.app']}
