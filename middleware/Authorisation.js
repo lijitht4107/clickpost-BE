@@ -6,7 +6,7 @@ const userAuth = (req,res,next)=>{
         const token =authHeader && authHeader.split(' ')[1]
         if(token == null) return res.sendStatus(401)
 
-        jwt.verify(token,process.env.JWT_PASSWORD,(err,decodedToken)=>{   
+        jwt.verify(token,"clickpost",(err,decodedToken)=>{   
             if(err) return res.sendStatus(403)
             if(decodedToken){
                 req.userid=decodedToken.userId

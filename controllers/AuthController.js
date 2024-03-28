@@ -43,7 +43,7 @@ const doLogin= async (req,res) => {
                 if(hashRes){
     
                 
-                const token =jwt.sign({userId:user._id,email:user.email,userName:user.userName,role:user?.role,},process.env.JWT_PASSWORD,{expiresIn:'2d'})
+                const token =jwt.sign({userId:user._id,email:user.email,userName:user.userName,role:user?.role,},"clickpost",{expiresIn:'2d'})
                 user.password = undefined
                 res.status(200).json({message:"login successfull",token:token, user:user })
                 }
