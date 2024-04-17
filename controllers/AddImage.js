@@ -5,6 +5,7 @@ const AddImage=async (req,res)=>{
 console.log(req.query);
     try {
         await IMAGES({
+            userId:req.query.userId,
             title:req.query.title,
              description:req.query.Description,
              pitcher:req.file.filename}).save()

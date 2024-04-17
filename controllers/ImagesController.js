@@ -50,13 +50,21 @@ const imageDataUpdate = (req, res) => {
       { id: req.body._id },
       { $set: { title: req.body.title, description: req.body.description } }
     ).then((response) => {
-      res.status(200).json({ response });
+      res.status(200).json({ response,message:response });
     });
   } catch (error) {
     res.status(500).json({ alert: "server error, pleasse try later" });
   }
 };
+
 const deleteImage = async (req, res) => {
+  fs.unlink("./public/pitchers/"+req.file.filename, (err) => {
+    if (err) {
+        console.log("failed to delete local image:"+err);
+    } else {
+        console.log('successfully deleted local image');                                
+    }
+  });
   console.log(req.params.id);
   try {
     const imageId = req.params.id;
