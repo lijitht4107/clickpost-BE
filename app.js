@@ -17,7 +17,7 @@ var app = express();
 connectDb()
 
 app.use(cors({
-  origin:['https://clickpost-fe22.onrender.com','http://localhost:3000',
+  origin:['https://clickpost-fe22.onrender.com','http://localhost:3000','http://localhost:3001',
   'https://click-post-fe-frontend.vercel.app']}
 ));
 // view engine setup

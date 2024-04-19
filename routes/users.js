@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-const { AddImage } = require("../controllers/AddImage");
+const { AddImage} = require("../controllers/AddImage");
 const {getAllImages,getimage,imageDataUpdate, deleteImage} = require('../controllers/ImagesController')
 const multer = require("multer");
 const { userAuth } = require("../middleware/Authorisation");
