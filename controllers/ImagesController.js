@@ -1,5 +1,6 @@
 const IMAGES = require("../models/AddImagesModel");
 const ObjectId = require("mongoose").Types.ObjectId;
+const fs =require('fs')
 
 const getAllImages = (req, res) => {
   IMAGES.find()

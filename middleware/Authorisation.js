@@ -2,6 +2,10 @@ const jwt = require('jsonwebtoken')
 
 const userAuth = (req,res,next)=>{
     try {
+        // const secretKey=process.env.JWT_PASSWORD
+        // if(!secretKey){
+        //   return res.sendStatus(401)
+        // }
         const authHeader = req.headers['authorization']
         const token =authHeader && authHeader.split(' ')[1]
         if(token == null) return res.sendStatus(401)
