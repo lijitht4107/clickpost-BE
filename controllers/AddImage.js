@@ -15,8 +15,8 @@ const AddImage = async (req, res) => {
     }
     var post = new IMAGES (postItem)
     await post.save();
-    post.pitcherUrl = `https://clickpost-be2-api.onrender.com/pitchers/${post.id}`
-    await post.save()
+    // post.pitcherUrl = `https://clickpost-be2-api.onrender.com/public/pitchers/${post.id}`
+    // await post.save()
   } catch (error) {
     console.log(error);
         res.status(500).json({error:"Iternal server error"})
