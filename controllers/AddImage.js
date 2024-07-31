@@ -15,7 +15,7 @@ const AddImage = async (req, res) => {
     }
     var post = new IMAGES (postItem)
     await post.save();
-    post.pitcherUrl = `http://localhost:8080/public/pitchers/${post.id}`
+    post.pitcherUrl = `https://clickpost-be2-api.onrender.com/pitchers/${post.id}`
     await post.save()
   } catch (error) {
     console.log(error);
