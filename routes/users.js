@@ -13,7 +13,7 @@ router.get("/", function (req, res, next) {
 });
 const fileStorage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "/pitchers");
+    cb(null, "./pitchers");
   },
   filename: (req, file, cb) => {
     cb(null, Date.now() + "-" + file.originalname);
